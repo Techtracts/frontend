@@ -1,0 +1,11 @@
+.vertical-line {
+    width: 1px;
+    background-color: var(--brand-purple);
+    height: 92vh;
+}
+
+.horizontal-line {
+    height: 1px;
+    background-color: var(--brand-purple);
+    width: 100%;
+}

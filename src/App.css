@@ -1,0 +1,28 @@
+.hyperlink-text {
+    color: var(--brand-yellow);
+    cursor: pointer;
+}
+
+.hyperlink-text--purple {
+    color: var(--brand-purple);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.cancel-button {
+    border: 1px solid red;
+    color: red;
+}
+
+.greyed-out-text {
+    color: #6D6D6D;
+}

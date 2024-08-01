@@ -1,0 +1,31 @@
+.dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    padding: 20px;
+}
+
+.dialog--top-icon {
+    height: 100px;
+    width: 100px;
+    align-self: center;
+}
+
+.dialog--text {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.dialog--button-div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.dialog--button-div button {
+    flex: 1;
+    width: 20%;
+    padding: 20px;
+}

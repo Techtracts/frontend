@@ -1,0 +1,7 @@
+.clause-id {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--brand-purple);
+    margin-bottom: 0.5rem;
+    font-family: 'Crimson Text', serif;
+}

@@ -1,0 +1,17 @@
+.risk-level-container {
+    height: 45px; /* Set the desired height here */
+    width: 70px; /* Adjust the width as needed */
+}
+
+.risk-level-bars {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.bar {
+    width: 20px;
+    margin: 0 2px;
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,17 @@
+.icon-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-title--icon {
+    display: block;
+    width: auto;
+    height: 2rem;
+}
+
+.icon-title--title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}

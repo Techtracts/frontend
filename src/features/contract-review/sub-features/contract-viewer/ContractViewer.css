@@ -1,0 +1,25 @@
+.contract-viewer {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    width: 100%;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+.selected-clause,
+.selected-clause > * {
+    /* Target all children of the .selected-clause element */
+    color: var(--brand-purple);
+    font-weight: 600;
+}
+
+.high-risk-clause {
+    background-color: rgba(255, 0, 0, 0.2);
+    color: black;
+    padding: 10px 20px 10px 0;
+    margin: 0 4px;
+    border-radius: 3px;
+}

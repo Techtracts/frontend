@@ -1,0 +1,31 @@
+.toggle-list {
+}
+
+.toggle-list-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-list-arrow {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.toggle-list-arrow-down {
+    transform: rotate(90deg);
+}
+
+.toggle-list-title {
+    margin-left: 8px;
+}
+
+.toggle-list-content {
+    font-family: 'Crimson Text', serif;
+    font-size: 17px;
+    font-weight: 400;
+    margin-left: 40px;
+    margin-top: 4px;
+}

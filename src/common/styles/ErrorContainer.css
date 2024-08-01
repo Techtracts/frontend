@@ -1,0 +1,21 @@
+.error-container {
+    display: flex;
+    border-radius: 10px;
+    background: var(--brand-yellow);
+    padding: 16px;
+    box-shadow: var(--small-box-shadow);
+    margin: 40px 0;
+}
+
+.error-container--message {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.error-container p {
+    margin: 0;
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 500;
+}

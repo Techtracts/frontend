@@ -1,0 +1,55 @@
+name: CDK Deployment to Production
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Environment Variables
+        run: |
+          echo "AWS_ACCESS_KEY_ID=${{ secrets.PROD_AWS_ACCESS_KEY_ID }}" >> $GITHUB_ENV
+          echo "AWS_SECRET_ACCESS_KEY=${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
+          echo "REGION=${{ vars.PROD_REGION }}" >> $GITHUB_ENV
+          echo "ACCOUNT_ID=${{ vars.PROD_ACCOUNT_ID }}" >> $GITHUB_ENV
+          echo "STAGE=prod" >> $GITHUB_ENV
+
+      - name: Configure AWS Credentials
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+          aws configure set region ${{ vars.PROD_REGION }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Set up API endpoints
+        run: cp ./src/configs/${{ env.STAGE }}/app-config.js ./src/configs/app-config.js
+
+      - name: Install AWS CDK
+        run: npm install -g aws-cdk
+
+      - name: Install dependencies for CDK
+        run: npm ci
+        working-directory: cdk
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Build application
+        run: npm run build
+
+      - name: Deploy CDK stack
+        run: |
+          cdk synth && cdk deploy --require-approval never
+        working-directory: cdk

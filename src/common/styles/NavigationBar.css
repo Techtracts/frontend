@@ -1,0 +1,33 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brand-purple);
+    height: 8vh;
+    padding: 0 2rem;
+}
+
+.navbar--group {
+    display: flex;
+    align-items: center;
+}
+
+.navbar--back-icon {
+    margin-right: 8px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.logo {
+    max-height: 15px;
+}
+
+.profile-pic {
+    height: 30px;
+    width: 30px;
+}
+
+.navbar--title {
+    color: var(--brand-yellow);
+    font-size: 1.5rem;
+}

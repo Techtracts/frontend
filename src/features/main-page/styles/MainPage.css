@@ -1,0 +1,12 @@
+.content-container {
+    display: flex;
+}
+
+.loading-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+    width: 100%;
+}

@@ -1,0 +1,15 @@
+.risk-overview {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.risk-overview--text {
+    width: 50%;
+    margin-left: 30px;
+    font-size: 16px;
+}
